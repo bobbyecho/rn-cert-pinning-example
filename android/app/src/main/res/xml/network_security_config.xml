@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:tools="http://schemas.android.com/tools">
+    <!-- Pin the domain www.datatheorem.com -->
+    <!-- Official Android N API -->
+    <base-config cleartextTrafficPermitted="true" />
+    <domain-config>
+        <domain>api.fingerinc.xyz</domain>
+        <pin-set>
+            <pin digest="SHA-256">XipVvk6P8jwCQnb5YGgXSb4pGmqr/rS+ekUnxdpvwAk=</pin>
+        </pin-set>
+        <!-- TrustKit Android API -->
+        <!-- Do not enforce pinning validation -->
+        <trustkit-config enforcePinning="false">
+            <!-- Add a reporting URL for pin validation reports -->
+            <report-uri>http://report.datatheorem.com/log_report</report-uri>
+        </trustkit-config>
+    </domain-config>
+</network-security-config>
